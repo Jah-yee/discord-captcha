@@ -66,7 +66,7 @@ class Captcha extends EventEmitter {
                 Emit.emit('success', info)
             }
 
-            function falied(info) {
+            function failed(info) {
                 Emit.emit('failure', info)
             }
 
@@ -128,7 +128,7 @@ class Captcha extends EventEmitter {
                                     button.reply.edit(`You have been verified in ${button.guild.name}`, true);
                                     succeeded(info);
                                 } else {
-                                    falied(info);
+                                    failed(info);
                                     captcha()
                                 }
                             })
